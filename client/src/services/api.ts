@@ -4,3 +4,7 @@ export const authEndpoints = {
     SIGNUP_API : BASE_URL + '/auth/signup',
     SIGNIN_API : BASE_URL + '/auth/signin'
 }
+
+export const userEndpoints = {
+    GET_USERS_API : BASE_URL + '/user'
+}

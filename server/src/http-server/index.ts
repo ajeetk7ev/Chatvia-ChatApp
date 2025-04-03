@@ -3,6 +3,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 import { dbConnect } from '../lib/db';
 import authRoutes from '../routes/auth';
+import userRoutes from '../routes/user';
 import cors from 'cors'
 
 const app = express();
@@ -22,6 +23,7 @@ const PORT = process.env.PORT || 8000
 
 
 app.use('/api/v1/auth',authRoutes);
+app.use('/api/v1/user',userRoutes);
 
 app.listen(PORT,()=>{
     console.log(`app is running at port ${PORT}`)
